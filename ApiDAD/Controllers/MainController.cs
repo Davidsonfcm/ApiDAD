@@ -4,10 +4,9 @@ using System.Web.Http;
 using Services;
 using ApiDAD.Models;
 
-
 namespace ApiDAD
 {
-    [RoutePrefix("api/v1/apiDAD")]
+    [RoutePrefix("Api/V1/ApiDAD")]
     public class MainController : ApiController
     {
         /// <summary>
@@ -15,7 +14,7 @@ namespace ApiDAD
         /// </summary>
         /// <remarks>Valida o funcionamento da API.</remarks>
         [HttpGet]
-        [Route("index")]
+        [Route("Index")]
         public IHttpActionResult Index()
         {
             return Ok("API OK");
@@ -36,7 +35,6 @@ namespace ApiDAD
             var usuarioServices = new UsuarioServices();
             usuarioServices.ValidarUsuario(input.Login, input.Senha);
            
-
             return Ok(true);
         }
       

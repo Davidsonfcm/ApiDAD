@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDAD", "ApiDAD\ApiDAD.csproj", "{A3A5A531-4800-46FF-956E-EEF45101C774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "F:\Git\TrabalhoDAD\TrabalhoDAD\Services\Services.csproj", "{B9702E65-69EB-40C4-99BF-6BE88F82EF91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "C:\Users\Davidson\dev\GIT\Trabalho_SD_API\Services\Services.csproj", "{B9702E65-69EB-40C4-99BF-6BE88F82EF91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "F:\Git\TrabalhoDAD\TrabalhoDAD\Model\Model.csproj", "{448D8206-4FA8-4749-9D1D-72CC8A6FC95F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "C:\Users\Davidson\dev\GIT\Trabalho_SD_API\Model\Model.csproj", "{448D8206-4FA8-4749-9D1D-72CC8A6FC95F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "F:\Git\TrabalhoDAD\TrabalhoDAD\DataAccess\DataAccess.csproj", "{2A32F614-AA07-4813-933D-ACEB655FC89C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "C:\Users\Davidson\dev\GIT\Trabalho_SD_API\DataAccess\DataAccess.csproj", "{2A32F614-AA07-4813-933D-ACEB655FC89C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

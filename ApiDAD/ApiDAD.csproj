@@ -22,6 +22,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -174,7 +175,11 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="F:\Git\TrabalhoDAD\TrabalhoDAD\Services\Services.csproj">
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{448d8206-4fa8-4749-9d1d-72cc8a6fc95f}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
       <Project>{b9702e65-69eb-40c4-99bf-6be88f82ef91}</Project>
       <Name>Services</Name>
     </ProjectReference>
