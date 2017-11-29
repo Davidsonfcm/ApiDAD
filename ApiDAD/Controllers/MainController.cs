@@ -3,10 +3,11 @@ using System.Net;
 using System.Web.Http;
 using Services;
 using ApiDAD.Models;
+using Model.DTO;
 
 namespace ApiDAD
 {
-    [RoutePrefix("Api/V1/ApiDAD")]
+    [RoutePrefix("Api/V1/Main")]
     public class MainController : ApiController
     {
         /// <summary>
@@ -24,18 +25,18 @@ namespace ApiDAD
         /// Retorna a lista de reservas que estão sobconsulta
         /// </summary>
         /// <remarks>Retorna a lista de reservas que estão sobconsulta.</remarks>
-        [HttpGet]
+        [HttpPost]
         [SwaggerResponse(HttpStatusCode.BadRequest, Description = "Parâmetro de entrada inválido.")]
         [SwaggerResponse(HttpStatusCode.InternalServerError, Description = "Erro no processamento do servidor.")]
         [SwaggerResponse(HttpStatusCode.NotFound, Description = "Valor do parâmetro de entrada não corresponde a um objeto existente.")]
         [SwaggerResponse(HttpStatusCode.OK, Description = "Validar Usuario", Type = typeof(bool))]
-        [Route("validarUsuario")]
-        public IHttpActionResult ValidarUsuario([FromBody] UsuarioInput input)
+        [Route("ValidarUsuario")]
+        public IHttpActionResult ValidarUsuario([FromBody]LoginInput loginInput)
         {
             var usuarioServices = new UsuarioServices();
-            usuarioServices.ValidarUsuario(input.Login, input.Senha);
+            ResponseDTO response = usuarioServices.ValidarUsuario(loginInput.Cpf, loginInput.Senha);
            
-            return Ok(true);
+            return Ok(response);
         }
       
     }
