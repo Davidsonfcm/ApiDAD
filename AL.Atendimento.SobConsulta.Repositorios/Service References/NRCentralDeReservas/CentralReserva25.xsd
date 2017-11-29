@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GrupoVeiculo.Business.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GrupoVeiculo.Business.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/GrupoVeiculo.Business.Entities.Enum" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" />
+  <xs:complexType name="DTOGrupoVeiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q1:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CapacidadeVeiculo" nillable="true" type="tns:DTOCapacidadeGrupoVeiculo" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GrupoVeiculo.Business.Entities.Enum" minOccurs="0" name="Categoria" type="q2:CategoriaGrupo" />
+          <xs:element minOccurs="0" name="CodigoInternacional" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoLocaliza" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoTipoGrupoVeiculo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ListaAcessorios" nillable="true" type="tns:ArrayOfDTOAcessoriosVeiculo" />
+          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOGrupoVeiculo" nillable="true" type="tns:DTOGrupoVeiculo" />
+  <xs:complexType name="DTOCapacidadeGrupoVeiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q3:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CapacidadeLitros" type="xs:double" />
+          <xs:element minOccurs="0" name="CapacidadeQuilogramas" type="xs:double" />
+          <xs:element minOccurs="0" name="CodigoGrupoVeiculo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantidadeMalasGrandes" type="xs:int" />
+          <xs:element minOccurs="0" name="QuantidadeMalasPequenas" type="xs:int" />
+          <xs:element minOccurs="0" name="QuantidadePassageiros" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOCapacidadeGrupoVeiculo" nillable="true" type="tns:DTOCapacidadeGrupoVeiculo" />
+  <xs:complexType name="ArrayOfDTOAcessoriosVeiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOAcessoriosVeiculo" nillable="true" type="tns:DTOAcessoriosVeiculo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOAcessoriosVeiculo" nillable="true" type="tns:ArrayOfDTOAcessoriosVeiculo" />
+  <xs:complexType name="DTOAcessoriosVeiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q4:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoDoAcessorio" type="xs:int" />
+          <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOAcessoriosVeiculo" nillable="true" type="tns:DTOAcessoriosVeiculo" />
+  <xs:complexType name="ArrayOfDTOVeiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOVeiculo" nillable="true" type="tns:DTOVeiculo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOVeiculo" nillable="true" type="tns:ArrayOfDTOVeiculo" />
+  <xs:complexType name="DTOVeiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q5:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoAcronymLocaliza" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoFabricante" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoLocaliza" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoModelo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EhBlindado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EhPadraoGrupo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomeFabricante" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrdemExibicao" type="xs:int" />
+          <xs:element minOccurs="0" name="UrlImagem" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOVeiculo" nillable="true" type="tns:DTOVeiculo" />
+</xs:schema>

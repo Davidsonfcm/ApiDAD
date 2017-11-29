@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities.CentralReserva" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities.CentralReserva" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities" />
+  <xs:complexType name="DTODadosBasicosReserva">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities" minOccurs="0" name="BinaRequisitante" nillable="true" type="q1:DTOTelefone" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities" minOccurs="0" name="CartaoCredito" nillable="true" type="q2:DTOCartaoCredito" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities" minOccurs="0" name="CelularRequisitante" nillable="true" type="q3:DTOTelefone" />
+      <xs:element minOccurs="0" name="CiaAerea" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoClientePJ" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoEmissor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoOrigemReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoSequencialDepartamento" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoTipoReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContatosReserva" nillable="true" type="tns:ArrayOfDTOContatoReserva" />
+      <xs:element minOccurs="0" name="DataHoraVoo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailSolicitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnviarEmailConfirmacao" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnviarEmailSolicitante" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnviarSMS" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities" minOccurs="0" name="FormaPagamento" nillable="true" type="q4:DTOFormaPagamento" />
+      <xs:element minOccurs="0" name="IdentificadorExterno" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities" minOccurs="0" name="InformacoesComplementaresOTA" nillable="true" type="q5:DTOInformacoesComplementaresOTA" />
+      <xs:element minOccurs="0" name="JustificativaDesconto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MotivoCancelamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MotivoNaoConfirmada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomeRequisitante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroVoo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Observacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PNR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusReserva" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities" minOccurs="0" name="TelefoneSolicitante" nillable="true" type="q6:DTOTelefone" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities" minOccurs="0" name="UpgradeFidelidade" nillable="true" type="q7:DTOUpgrade" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTODadosBasicosReserva" nillable="true" type="tns:DTODadosBasicosReserva" />
+  <xs:complexType name="ArrayOfDTOContatoReserva">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOContatoReserva" nillable="true" type="tns:DTOContatoReserva" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOContatoReserva" nillable="true" type="tns:ArrayOfDTOContatoReserva" />
+  <xs:complexType name="DTOContatoReserva">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoContato" type="xs:int" />
+      <xs:element minOccurs="0" name="DataResposta" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataUltimoEnvio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdResposta" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Localizador" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOContatoReserva" nillable="true" type="tns:DTOContatoReserva" />
+  <xs:complexType name="DTOReservaConsultaCompleto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities" base="q8:DTOReservaConsulta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DadosBasicos" nillable="true" type="tns:DTODadosBasicosReserva" />
+          <xs:element minOccurs="0" name="ItensDesconto" nillable="true" type="q8:ArrayOfDTOItemDesconto" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOReservaConsultaCompleto" nillable="true" type="tns:DTOReservaConsultaCompleto" />
+</xs:schema>

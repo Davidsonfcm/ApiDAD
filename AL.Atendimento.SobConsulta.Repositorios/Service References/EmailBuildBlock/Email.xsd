@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Email.Business.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Email.Business.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wapps-h.localiza.com/Corporativo/BuildingBlocks/Email/Servicos/Email.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/AcessoBB.Business.Exceptions" />
+  <xs:complexType name="AnexoInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/AcessoBB.Business.Exceptions" base="q1:ExceptionBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AnexoInvalido" nillable="true" type="tns:AnexoInvalido" />
+  <xs:complexType name="EmailSemAssuntoCorpo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/AcessoBB.Business.Exceptions" base="q2:ExceptionBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmailSemAssuntoCorpo" nillable="true" type="tns:EmailSemAssuntoCorpo" />
+  <xs:complexType name="EnderecoEmailInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/AcessoBB.Business.Exceptions" base="q3:ExceptionBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EnderecoEmailInvalido" nillable="true" type="tns:EnderecoEmailInvalido" />
+  <xs:complexType name="ParametroInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/AcessoBB.Business.Exceptions" base="q4:ExceptionBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParametroInvalido" nillable="true" type="tns:ParametroInvalido" />
+</xs:schema>

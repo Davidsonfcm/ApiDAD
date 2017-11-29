@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Reservas.Business.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Reservas.Business.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd24" namespace="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao.ExcecoesUtil" />
+  <xs:complexType name="ExcecaoQuantidadeAdicionaisExcedida">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q1:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoQuantidadeAdicionaisExcedida" nillable="true" type="tns:ExcecaoQuantidadeAdicionaisExcedida" />
+  <xs:complexType name="ExcecaoErroCotacaoTempoMenorQueMinimo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q2:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoErroCotacaoTempoMenorQueMinimo" nillable="true" type="tns:ExcecaoErroCotacaoTempoMenorQueMinimo" />
+  <xs:complexType name="ExcecaoAgenciaViagemNaoVinculadaAEmpresa">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q3:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoAgenciaViagemNaoVinculadaAEmpresa" nillable="true" type="tns:ExcecaoAgenciaViagemNaoVinculadaAEmpresa" />
+  <xs:complexType name="ExcecaoAgenciaViagemNaoPodeEfetuarReservas">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q4:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoAgenciaViagemNaoPodeEfetuarReservas" nillable="true" type="tns:ExcecaoAgenciaViagemNaoPodeEfetuarReservas" />
+  <xs:complexType name="ExcecaoAgenciasRetiradaEDevolucaoPaisesDiferentes">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q5:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoAgenciasRetiradaEDevolucaoPaisesDiferentes" nillable="true" type="tns:ExcecaoAgenciasRetiradaEDevolucaoPaisesDiferentes" />
+  <xs:complexType name="ExcecaoClientePJNaoPodeEfetuarReservas">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q6:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoClientePJNaoPodeEfetuarReservas" nillable="true" type="tns:ExcecaoClientePJNaoPodeEfetuarReservas" />
+  <xs:complexType name="ExcecaoClienteSemCreditoParaReservas">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q7:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoClienteSemCreditoParaReservas" nillable="true" type="tns:ExcecaoClienteSemCreditoParaReservas" />
+  <xs:complexType name="ExcecaoCotacaoForaDoPeriodoPermitido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q8:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoCotacaoForaDoPeriodoPermitido" nillable="true" type="tns:ExcecaoCotacaoForaDoPeriodoPermitido" />
+  <xs:complexType name="HorarioRetiradaVeiculoInferiorAoMinimo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q9:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HorarioRetiradaVeiculoInferiorAoMinimo" nillable="true" type="tns:HorarioRetiradaVeiculoInferiorAoMinimo" />
+  <xs:complexType name="ParametroOperacaoReservaNaoPreenchido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao.ExcecoesUtil" base="q10:DadoNaoPreenchido">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParametroOperacaoReservaNaoPreenchido" nillable="true" type="tns:ParametroOperacaoReservaNaoPreenchido" />
+  <xs:complexType name="ParametroOperacaoReservaComValorInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao.ExcecoesUtil" base="q11:DadoComValorInvalido">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParametroOperacaoReservaComValorInvalido" nillable="true" type="tns:ParametroOperacaoReservaComValorInvalido" />
+  <xs:complexType name="ExcecaoKMMedioObrigatorio">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q12:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoKMMedioObrigatorio" nillable="true" type="tns:ExcecaoKMMedioObrigatorio" />
+  <xs:complexType name="DadosCotacaoInconsistentes">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q13:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DadosCotacaoInconsistentes" nillable="true" type="tns:DadosCotacaoInconsistentes" />
+  <xs:complexType name="AdicionalReservaInconsistente">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q14:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AdicionalReservaInconsistente" nillable="true" type="tns:AdicionalReservaInconsistente" />
+  <xs:complexType name="ExcecaoMaisDeUmAdicionalCompostoSelecionado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q15:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoMaisDeUmAdicionalCompostoSelecionado" nillable="true" type="tns:ExcecaoMaisDeUmAdicionalCompostoSelecionado" />
+  <xs:complexType name="ExcecaoUnidadesLimitesDeAdicionaisAtingidos">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q16:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoUnidadesLimitesDeAdicionaisAtingidos" nillable="true" type="tns:ExcecaoUnidadesLimitesDeAdicionaisAtingidos" />
+  <xs:complexType name="GrupoVeiculoBloqueadoParaVenda">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q17:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GrupoVeiculoBloqueadoParaVenda" nillable="true" type="tns:GrupoVeiculoBloqueadoParaVenda" />
+  <xs:complexType name="ExcecaoInformacoesSobreVooNaoPreenchidas">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q18:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoInformacoesSobreVooNaoPreenchidas" nillable="true" type="tns:ExcecaoInformacoesSobreVooNaoPreenchidas" />
+  <xs:complexType name="ExcecaoNumeroDocumentoInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q19:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoNumeroDocumentoInvalido" nillable="true" type="tns:ExcecaoNumeroDocumentoInvalido" />
+  <xs:complexType name="ExcecaoNumeroTelefoneInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q20:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoNumeroTelefoneInvalido" nillable="true" type="tns:ExcecaoNumeroTelefoneInvalido" />
+  <xs:complexType name="ExcecaoNumeroCelularInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q21:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoNumeroCelularInvalido" nillable="true" type="tns:ExcecaoNumeroCelularInvalido" />
+  <xs:complexType name="ExcecaoEmailInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q22:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoEmailInvalido" nillable="true" type="tns:ExcecaoEmailInvalido" />
+  <xs:complexType name="ExcecaoClienteNegativado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q23:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoClienteNegativado" nillable="true" type="tns:ExcecaoClienteNegativado" />
+  <xs:complexType name="ReservaInexistente">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q24:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReservaInexistente" nillable="true" type="tns:ReservaInexistente" />
+  <xs:complexType name="ReservaNaoPodeSerAlterada">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q25:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReservaNaoPodeSerAlterada" nillable="true" type="tns:ReservaNaoPodeSerAlterada" />
+  <xs:complexType name="ErroGenericoReservas">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q26:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ErroGenericoReservas" nillable="true" type="tns:ErroGenericoReservas" />
+  <xs:complexType name="ImpossibilidadeDeCalculoDeTaxaDeRetorno">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q27:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImpossibilidadeDeCalculoDeTaxaDeRetorno" nillable="true" type="tns:ImpossibilidadeDeCalculoDeTaxaDeRetorno" />
+  <xs:complexType name="DataRetiradaForaDoPeriodoPermitido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q28:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataRetiradaForaDoPeriodoPermitido" nillable="true" type="tns:DataRetiradaForaDoPeriodoPermitido" />
+  <xs:complexType name="ExcecaoAlteracaoDisponibilidadeGrupoVeiculoAntesConfirmacaoReserva">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q29:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoAlteracaoDisponibilidadeGrupoVeiculoAntesConfirmacaoReserva" nillable="true" type="tns:ExcecaoAlteracaoDisponibilidadeGrupoVeiculoAntesConfirmacaoReserva" />
+  <xs:complexType name="ExecaoClientePossuiAcordoComercialUtilizarTarifario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q30="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q30:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExecaoClientePossuiAcordoComercialUtilizarTarifario" nillable="true" type="tns:ExecaoClientePossuiAcordoComercialUtilizarTarifario" />
+  <xs:complexType name="ExcecaoClientePJJaCadastradoParaReserva">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q31:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoClientePJJaCadastradoParaReserva" nillable="true" type="tns:ExcecaoClientePJJaCadastradoParaReserva" />
+  <xs:complexType name="ExcecaoCodigoPromocionalJAUsadoPeloCPF">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q32:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoCodigoPromocionalJAUsadoPeloCPF" nillable="true" type="tns:ExcecaoCodigoPromocionalJAUsadoPeloCPF" />
+  <xs:complexType name="ReservaNaoPodeSerConsultada">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q33:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReservaNaoPodeSerConsultada" nillable="true" type="tns:ReservaNaoPodeSerConsultada" />
+</xs:schema>

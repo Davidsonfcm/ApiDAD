@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd11" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities.Enum" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/Usuario.Business.Entities" />
+  <xs:complexType name="DTOClienteAutenticado">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q1:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClienteFAST" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodigoCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoTokenAutenticacao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ListaBeneficios" nillable="true" type="tns:ArrayOfDTOPoliticaBeneficio" />
+          <xs:element minOccurs="0" name="ListaClassicacoes" nillable="true" type="tns:ArrayOfDTOClassificacaoCliente" />
+          <xs:element minOccurs="0" name="Nacionalidade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PodeOfertarMotorista" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PoliticaBeneficioFidelidadeDisponivel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PontosFidelidade" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOClienteAutenticado" nillable="true" type="tns:DTOClienteAutenticado" />
+  <xs:complexType name="ArrayOfDTOPoliticaBeneficio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOPoliticaBeneficio" nillable="true" type="tns:DTOPoliticaBeneficio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOPoliticaBeneficio" nillable="true" type="tns:ArrayOfDTOPoliticaBeneficio" />
+  <xs:complexType name="DTOPoliticaBeneficio">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q2:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoBeneficio" type="xs:int" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaAgencias" nillable="true" type="q3:ArrayOfstring" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaCodigosSegmentoVencedorContrato" nillable="true" type="q4:ArrayOfstring" />
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaCodigosSegmentoVoucher" nillable="true" type="q5:ArrayOfstring" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaCodigosSegmentosCliente" nillable="true" type="q6:ArrayOfstring" />
+          <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaCodigosTipoContrato" nillable="true" type="q7:ArrayOfstring" />
+          <xs:element minOccurs="0" name="ListaParticularidadeBeneficio" nillable="true" type="tns:ArrayOfDTOParticularidadeBeneficio" />
+          <xs:element minOccurs="0" name="NomeBeneficio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QuantidadeFornecida" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="QuantidadeUtilizada" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UnidadeDeMedidaDaQuantidade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Validade" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOPoliticaBeneficio" nillable="true" type="tns:DTOPoliticaBeneficio" />
+  <xs:complexType name="ArrayOfDTOParticularidadeBeneficio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOParticularidadeBeneficio" nillable="true" type="tns:DTOParticularidadeBeneficio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOParticularidadeBeneficio" nillable="true" type="tns:ArrayOfDTOParticularidadeBeneficio" />
+  <xs:complexType name="DTOParticularidadeBeneficio">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q8:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InformacaoAdicional" nillable="true" type="xs:string" />
+          <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaValoresAdicionais" nillable="true" type="q9:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOParticularidadeBeneficio" nillable="true" type="tns:DTOParticularidadeBeneficio" />
+  <xs:complexType name="ArrayOfDTOClassificacaoCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOClassificacaoCliente" nillable="true" type="tns:DTOClassificacaoCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOClassificacaoCliente" nillable="true" type="tns:ArrayOfDTOClassificacaoCliente" />
+  <xs:complexType name="DTOClassificacaoCliente">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q10:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoClassificacao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescricaoClassificacao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdentificadorCategoria" type="xs:int" />
+          <xs:element minOccurs="0" name="Selecionado" type="xs:boolean" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities.Enum" minOccurs="0" name="TipoClassicacao" type="q11:TipoClassificacaoCliente" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOClassificacaoCliente" nillable="true" type="tns:DTOClassificacaoCliente" />
+  <xs:complexType name="DTOTelefone">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q12:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DDD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DDI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string" />
+          <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Cliente.Business.Entities.Enum" minOccurs="0" name="Tipo" type="q13:TipoTelefone" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOTelefone" nillable="true" type="tns:DTOTelefone" />
+  <xs:complexType name="DTORequisitante">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q14:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Aprovacao" nillable="true" type="tns:DTOAprovacao" />
+          <xs:element minOccurs="0" name="CodigoAGVIG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoAgvigGenerica" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoEmissor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoPJ" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoParceiro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoSeguradora" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MatriculaColaborador" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTORequisitante" nillable="true" type="tns:DTORequisitante" />
+  <xs:complexType name="DTOAprovacao">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q15:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoSetorAprovador" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CodigoUsuarioAprovadorReserva" nillable="true" type="xs:string" />
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Usuario.Business.Entities" minOccurs="0" name="UsuarioAprovador" nillable="true" type="q16:DTOUsuario" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOAprovacao" nillable="true" type="tns:DTOAprovacao" />
+  <xs:complexType name="DTOCliente">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q17:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AtivoInternet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CadastroAtualizado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodigoLocaliza" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoTipoDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EmailSecundario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nacionalidade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomeCompleto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PossuiSenhaCadastrada" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SituacaoFidelidade" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TelefoneContato" nillable="true" type="tns:DTOTelefone" />
+          <xs:element minOccurs="0" name="TelefoneSMS" nillable="true" type="tns:DTOTelefone" />
+          <xs:element minOccurs="0" name="TipoCliente" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOCliente" nillable="true" type="tns:DTOCliente" />
+  <xs:complexType name="DTOCartaoCredito">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoBandeira" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoSeguranca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescricaoBandeira" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomeIdentificacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroCartao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vencimento" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOCartaoCredito" nillable="true" type="tns:DTOCartaoCredito" />
+</xs:schema>

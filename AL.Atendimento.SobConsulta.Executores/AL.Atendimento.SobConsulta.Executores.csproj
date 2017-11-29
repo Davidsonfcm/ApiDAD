@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AB31CF4-4DEE-421C-AC9E-1B1A7A24DE3A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AL.Atendimento.SobConsulta.Executores</RootNamespace>
+    <AssemblyName>AL.Atendimento.SobConsulta.Executores</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Localiza.SDK, Version=2.0.0.29883, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Localiza.SDK.2.0.0.29883\lib\net452\Localiza.SDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Localiza.SDK.AcessoDados, Version=2.0.0.35877, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Localiza.SDK.AcessoDados.2.0.0.35877\lib\net452\Localiza.SDK.AcessoDados.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Localiza.SDK.Configuracoes, Version=1.0.0.32735, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Localiza.SDK.Configuracoes.1.0.0.32735\lib\net452\Localiza.SDK.Configuracoes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Localiza.SDK.Fronteira, Version=1.3.0.32379, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Localiza.SDK.Fronteira.1.3.0.32379\lib\net452\Localiza.SDK.Fronteira.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.5.0\lib\net45\Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfiguracoesGrupo\GravarConfiguracoesGrupoExecutor.cs" />
+    <Compile Include="Email\EnviarEmailErroExecutor.cs" />
+    <Compile Include="Parametros\ObterParametroSpocExecutor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\wsReserva\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SobConsulta\DesbloquearReservaSobConsultaExecutor.cs" />
+    <Compile Include="SobConsulta\BloquearReservaSobConsultaExecutor.cs" />
+    <Compile Include="SobConsulta\AlterarReservaSobConsultaExecutor.cs" />
+    <Compile Include="SobConsulta\ConfirmarReservaExecutor.cs" />
+    <Compile Include="ConfiguracoesGrupo\ListarConfiguracoesGrupoExecutor.cs" />
+    <Compile Include="SobConsulta\ListarMotivosNaoConfirmacaoExecutor.cs" />
+    <Compile Include="SobConsulta\ListarMotivosCancelamentoExecutor.cs" />
+    <Compile Include="SobConsulta\ListarReservasProcessadasExecutor.cs" />
+    <Compile Include="SobConsulta\ObterReservaSobConsultaExecutor.cs" />
+    <Compile Include="SobConsulta\ListarReservasSobConsultaExecutor.cs" />
+    <Compile Include="SobConsulta\ComunicacaoSobConsultaExecutor.cs" />
+    <Compile Include="Usuario\ObterUsuarioLogadoExecutor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarMotivoCancelamentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarOrigemReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarRegistroCheckListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarRegistroNaoConfirmacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarRegistroSituacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarSolicitacaoAluguelMensalEstruturadoNovoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarSolicitacaoAluguelMensalEstruturadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarSolicitacaoAluguelMensalNovoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarSolicitacaoAluguelMensalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarSolicitacaoListaEsperaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AdicionarTipoReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AlterarPermissaoAlteraReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AlterarReservaReconfirmacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AlterarReservaWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AlterarStatusConfimacaoReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AssociacaoReservaContato.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AssociacaoReservaSolicitacaoAM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarABAVLiberadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarAtendimentoChecarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarAtendimentoChecarUVersionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarAtendimentoDeschecarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarCreditoClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarCreditoLiberadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarCreditoNaoLiberadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarEMailClienteWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarInformacoesAluguelMensalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarNoticiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarRegistroCheckListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarReservaComplementoWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarSolicitacaoAluguelMensalEstruturadoNovoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AtualizarSolicitacaoAluguelMensalEstruturadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.AutonomiaDesconto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BandeiraCartao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BeneficiosComUpgrade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscaClienteTarifaExtensaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarContatosReconfirmacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarInformacoesAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarInformacoesAdicionaisTarifasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarNomeMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarOrigemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarPermissaoAlteraReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarQtdCarrosPorStatusECidadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarQtdCarrosPorTipoEAgenciaAgrupadoPorStatusCarroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarQtdContratosRelacionadosDataReferenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarQtdReservasRelacionadasDataReferenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarReservasDuplicadasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarReservasEmAbertoClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarReservasPorAtendenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarTodasInformacoesAdicionaisTarifasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarWEB_uversionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.BuscarXMLWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaAluguelMensalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaInternacionalBeneficiosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaInternacionalCompleto1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaInternacionalCompletoTaxaRetorno1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaInternacionalIdiomaComGPS1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaInternacionalSemTagBeneficiosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaInterncionalAgenciaCobrancaTag1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaInterncionalComGPSAdicionais1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValoresDaReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaAluguelMensalAdicionaisBeneficiosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaAluguelMensalAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaAluguelMensalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaBase1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaBaseAdicionais1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaBaseAdicionaisBeneficio1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalBeneficiosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalCompleto1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalCompletoAdicionais1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalCompletoTaxaRetorno1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalCompletoTaxaRetornoAdicionais1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalIdiomaComGPS1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalIdiomaComGPSAdicionais1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInternacionalSemTagBeneficiosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInterncionalAgenciaCobrancaTag1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInterncionalAgenciaCobrancaTagAdicionais1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaInterncionalComGPSAdicionais1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaMensalAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaMensalAdicionaisToleranciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaMensalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CalcularValorReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CancelarReservaInternacionalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CancelarReservaWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CarregaMotivoCancelamentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.CartaoCliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ConfirmacaoReservaModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ConfirmarReservaCotacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ConfirmarReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ConsultaMsgCliParametrizadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ConsultarNoShowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.DeletarNoticiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.DisponibilidadeDeFrota.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.Enviaemailparaclientequeestãosemalugarduranteumperíodo1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.EnviarEmailConfirmacaoReservaBeneficiosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.EstruturaGravacaoReserva.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.EstruturaValidacaoAgenciaViagemSeguradora.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.EstruturaValidacaoAluguelMensal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.EstruturaValidacaoCliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.EstruturaValidacaoTarifa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.EstruturaValoresReserva.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.EstruturaValoresTotais.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ExcluirPermissaoAlteraReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ExecuteXMLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GerarNumeroReservaWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GetNoticiasPeloCodigoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GetResultMethodAsStringResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GetTodasNoticiasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GetUsuarioPorEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GetVouchersTarifaCadastradosPorSistemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GetVouchersTarifaCadastradosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GravarInformacoesPreCadastroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GravarInformacoesPreCadastroWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GravarInformacoesPreCadastroWEBTipoLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GravarListaReservasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GravarPontoExtraFidelidadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GravarReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GravarReservasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.GravarReservaWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.IncluirPermissaoAlteraReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.InsereAssociacaoMotivoCancelamentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.InserirNoticiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.InserirSolicitacaoCreditoClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.Insert_Com_Parametro_Model_Reserva1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.Insert_parametros_limitados1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarAdicionaisTarifasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarAgenciaProxResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarAgenciasPorCentroOperativoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarCentroOperativoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarCheckListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarCidadesPorEstadoEPaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarCidadesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarComFaixaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarContatosWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarFaixaPNRResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarFiltroReservasEmConfirmacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarHistoricoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarMotivoCancelamentoPorCodigoMotivoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarMotivosCancelamentoPorSistemaNovoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarMotivosCancelamentoPorSistemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarMotivosCancelamentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarMotivosNaoConfirmacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarOrigemReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarOrigemReservasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarOrigensResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarPermissaoAlteraReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarRelatoriosAdministracaoCeresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarReservasEmConfirmacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarReservasEmConsultaParaAcompanhamentoDaCeresOuControleDeFrotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarReservasEmConsultaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarReservasFrotaIndisponivelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarSistemasAtivosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarSituacoesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarSolicitacaoAluguelMensalESiglaAreaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarSolicitacaoAluguelMensalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarTiposMotoristaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarTiposReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarTodosAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarTodosAdicionaisTarifasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarUFBase1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ListarUFPais1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.Noticia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ObterBandeiraPeloNumeroCartaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ObterDescricaoMotoristaPeloTipoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ObterIdCidadeRetiradaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ObterListaBeneficiosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ObterValorFaturamentoAcordadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.PegarValorPorKmTaxaRetornoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.PegarValorTaxaRetornoParaMesmaCidadeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.PegarValorTaxaTerraFogoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ReavaliarCreditoAutomaticamenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ReconfirmarReservaViaTelefoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RecuperarListaReconResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RecuperarLocalizadorReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RelatorioImpressaoReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RelatorioReservasBalcaoMensagensResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RelatorioReservasBalcaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RelatorioReservasFuturasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RelatorioReservasWebFacilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.Reserva.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RetornoConfirmacaoReservaCotacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RetornoListaDiscadorPreditivo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.RotinaRelatorioReservasFuturasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.SolicitacaoReservaAluguelMensal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.StatusCarroQuantidade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ValidarAgenciaViagemSeguradoraComGrupoDeCarrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ValidarAgenciaViagemSeguradoraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ValidarClienteNaCriacaoDeReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ValidarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ValidarClienteverificandoseclientetemnegociaçãoparaogrupodecarrosescolhido1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ValidarTarifaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.ValidarUsuarioClienteReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.VerificarConfirmacaoAutomaticaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.VerificarDisponibilidadeDeFrotaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.VerificarPermissaoAlteraReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.VerificarQuantidadeEmailsClienteWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.VerificarReservaComplementoWEBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.VerificarSeAtendentePodeEscolherAgenciaAluguelMensalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\AL.Atendimento.SobConsulta.Executores.wsReserva.VerificarTipoAgenciaCorporacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsReserva\Reservas.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PackageContent\Readme.txt" />
+    <Content Include="Readme.txt" />
+    <None Include="Service References\wsReserva\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsReserva\configuration.svcinfo" />
+    <None Include="Service References\wsReserva\configuration91.svcinfo" />
+    <None Include="Service References\wsReserva\Reservas.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AL.Atendimento.SobConsulta.Entidades\AL.Atendimento.SobConsulta.Entidades.csproj">
+      <Project>{c8756cea-eca8-4987-ab08-e9cf175e52b3}</Project>
+      <Name>AL.Atendimento.SobConsulta.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AL.Atendimento.SobConsulta.Fronteiras\AL.Atendimento.SobConsulta.Fronteiras.csproj">
+      <Project>{4cf2b052-f548-4040-b7a4-868847fb2c7b}</Project>
+      <Name>AL.Atendimento.SobConsulta.Fronteiras</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AL.Atendimento.SobConsulta.Repositorios\AL.Atendimento.SobConsulta.Repositorios.csproj">
+      <Project>{fd66ebc4-daf4-4b7e-a18a-8a470e309a5d}</Project>
+      <Name>AL.Atendimento.SobConsulta.Repositorios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AL.Atendimento.SobConsulta.Util\AL.Atendimento.SobConsulta.Util.csproj">
+      <Project>{f0cab202-59c6-4e5b-b415-fea8a5608df6}</Project>
+      <Name>AL.Atendimento.SobConsulta.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\wsReserva\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

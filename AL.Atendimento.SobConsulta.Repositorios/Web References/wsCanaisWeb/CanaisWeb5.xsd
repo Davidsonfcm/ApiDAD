@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://www-h.localiza.com/Empresas2/servicos/CanaisWeb.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" />
+  <xs:import schemaLocation="http://www-h.localiza.com/Empresas2/servicos/CanaisWeb.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Relatorios" />
+  <xs:import schemaLocation="http://www-h.localiza.com/Empresas2/servicos/CanaisWeb.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://www-h.localiza.com/Empresas2/servicos/CanaisWeb.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos" />
+  <xs:import schemaLocation="http://www-h.localiza.com/Empresas2/servicos/CanaisWeb.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Politicas" />
+  <xs:element name="ObterToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObterTokenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterTokenWebFacil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterTokenWebFacilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObterTokenWebFacilResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTemAcessoAoCorporateNovo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matricula" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTemAcessoAoCorporateNovoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarUsuarioTemAcessoAoCorporateNovoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTemAcessoAoCorporateNovoEAntigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matricula" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTemAcessoAoCorporateNovoEAntigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarUsuarioTemAcessoAoCorporateNovoEAntigoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTemAcessoAoWebFacilNovo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matricula" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTemAcessoAoWebFacilNovoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarUsuarioTemAcessoAoWebFacilNovoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTemAcessoAoWebFacilNovoEAntigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matricula" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarUsuarioTemAcessoAoWebFacilNovoEAntigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarUsuarioTemAcessoAoWebFacilNovoEAntigoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescriptografarTokenRetornandoUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescriptografarTokenRetornandoUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DescriptografarTokenRetornandoUsuarioResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InserirUsuarioNoPerfil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matriculaUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="perfilUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InserirUsuarioNoPerfilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InserirUsuarioNoPerfilResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoverUsuarioNoPerfil">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matriculaUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="perfilUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoverUsuarioNoPerfilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoverUsuarioNoPerfilResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehWebFacil" type="xs:boolean" />
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterDadosReservaResult" nillable="true" type="q1:InformacoesReservaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosReservaAdicionais">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehWebFacil" type="xs:boolean" />
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosReservaAdicionaisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterDadosReservaAdicionaisResult" nillable="true" type="q2:ArrayOfInformacoesAdicionalDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosReservaBeneficios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehWebFacil" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosReservaBeneficiosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterDadosReservaBeneficiosResult" nillable="true" type="q3:ArrayOfInformacoesBeneficioDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosReservaAtributos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehWebFacil" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosReservaAtributosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterDadosReservaAtributosResult" nillable="true" type="q4:ArrayOfInformacoesAtributosDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsDadosReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsDadosReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterLabelsDadosReservaResult" nillable="true" type="q5:LabelInformacoesReservaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsInformacoesGerais">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsInformacoesGeraisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterLabelsInformacoesGeraisResult" nillable="true" type="q6:LabelInformacoesGeraisDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsInformacoesGeraisInternacionalizacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segmentoAplicacao" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsInformacoesGeraisInternacionalizacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterLabelsInformacoesGeraisInternacionalizacaoResult" nillable="true" type="q7:TermosECondicoesConfirmacaoReservaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsRelatoriosFaturamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="listaOrigens" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrato" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsRelatoriosFaturamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Relatorios" minOccurs="0" name="ObterLabelsRelatoriosFaturamentoResult" nillable="true" type="q8:LabelInformacoesFaturamentoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsInformacoesRelatorioReservas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="situacoes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="origens" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterLabelsInformacoesRelatorioReservasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Relatorios" minOccurs="0" name="ObterLabelsInformacoesRelatorioReservasResult" nillable="true" type="q9:LabelInformacoesRelatorioReservasDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterHorarioFuncionamentoAgencias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehRetirada" type="xs:boolean" />
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehWebFacil" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterHorarioFuncionamentoAgenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterHorarioFuncionamentoAgenciasResult" nillable="true" type="q10:ArrayOfInformacoesHorarioFuncionamentoAgenciaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosCotacaoReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="guidCotacao" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoAgvig" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehWebFacil" type="xs:boolean" />
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosCotacaoReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterDadosCotacaoReservaResult" nillable="true" type="q11:InformacoesReservaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosRelatorioReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="matriculaUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="empresas" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centroDeCusto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="situacoes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataRetiradaInicial" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dataRetiradaFinal" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ehAGVIG" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dataDevolucaoInicial" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dataDevolucaoFinal" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dataCriacaoInicial" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dataCriacaoFinal" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="agencias" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="origemReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="naoEnviarCodigoEmissor" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosRelatorioReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterDadosRelatorioReservaResult" nillable="true" type="q12:ArrayOfInformacoesReservaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosCotacaoAdicionais">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCotacao" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehWebFacil" type="xs:boolean" />
+        <xs:element minOccurs="0" name="codigoCultura" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterDadosCotacaoAdicionaisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" minOccurs="0" name="ObterDadosCotacaoAdicionaisResult" nillable="true" type="q13:ArrayOfInformacoesAdicionalDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarNovosUsuariosPefilNovaWebCorp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dataReferencia" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CadastrarNovosUsuariosPefilNovaWebCorpResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmarReservaPendenteCredito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="origemReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="faturarAGVIG" type="xs:boolean" />
+        <xs:element minOccurs="0" name="faturarPJ" type="xs:boolean" />
+        <xs:element minOccurs="0" name="matricula" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmarReservaPendenteCreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConfirmarReservaPendenteCreditoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReprovarReservaPendenteCredito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="origemReserva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="faturarAGVIG" type="xs:boolean" />
+        <xs:element minOccurs="0" name="faturarPJ" type="xs:boolean" />
+        <xs:element minOccurs="0" name="matricula" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReprovarReservaPendenteCreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReprovarReservaPendenteCreditoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GravarItensVoucherReservaProduto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dataReferencia" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GravarItensVoucherReservaProdutoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailConfirmacaoReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailConfirmacaoReservaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailConfirmacaoReservaComListaDestinatarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="listaDestinatarios" nillable="true" type="q14:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailConfirmacaoReservaComListaDestinatariosResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailConfirmacaoReservaComStatusPendenteCredito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ehWebFacil" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailConfirmacaoReservaComStatusPendenteCreditoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterCartoesVirtuaisDoClienteParaUtilizacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoClienteAGVIG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoClientePJ" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObterCartoesVirtuaisDoClienteParaUtilizacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos" minOccurs="0" name="ObterCartoesVirtuaisDoClienteParaUtilizacaoResult" nillable="true" type="q15:ArrayOfCartaoVirtualUtilizacaoDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailESMSConfirmacaoReservaPendenteDeCreditoCorporate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuarioLogado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoCliente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailESMSConfirmacaoReservaPendenteDeCreditoCorporateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailESMSConfirmacaoReservaPendenteDeCreditoAGVIG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoEmissor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarEmailESMSConfirmacaoReservaPendenteDeCreditoAGVIGResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarSeReservaNecessitaAprovacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cpfCondutor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idAreaCondutor" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="matriculaUsuarioLogado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idAreaSolicitante" nillable="true" type="xs:int" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Politicas" minOccurs="0" name="dadosReservaParaComparacao" nillable="true" type="q16:ComparacaoPoliticaDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarSeReservaNecessitaAprovacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificarSeReservaNecessitaAprovacaoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarPresencaNaListaClinton">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="culturaLogada" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarPresencaNaListaClintonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos" minOccurs="0" name="VerificarPresencaNaListaClintonResult" nillable="true" type="q17:ListaClintonDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,162 @@
+﻿<error errorId="e03c52b0-f5f1-490a-bc3e-be58f22f9f21" application="/LM/W3SVC/2/ROOT" host="DESKTOP-1E18BD4" type="System.ServiceModel.ActionNotSupportedException" message="The message with Action 'http://tempuri.org/ICentralReserva/ListarReservasSobConsulta' cannot be processed at the receiver, due to a ContractFilter mismatch at the EndpointDispatcher. This may be because of either a contract mismatch (mismatched Actions between sender and receiver) or a binding/security mismatch between the sender and the receiver.  Check that sender and receiver have the same contract and the same binding (including security requirements, e.g. Message, Transport, None)." source="mscorlib" detail="System.Exception: internacional:false&#xD;&#xA; ---&gt; System.ServiceModel.ActionNotSupportedException: The message with Action 'http://tempuri.org/ICentralReserva/ListarReservasSobConsulta' cannot be processed at the receiver, due to a ContractFilter mismatch at the EndpointDispatcher. This may be because of either a contract mismatch (mismatched Actions between sender and receiver) or a binding/security mismatch between the sender and the receiver.  Check that sender and receiver have the same contract and the same binding (including security requirements, e.g. Message, Transport, None).&#xD;&#xA;&#xD;&#xA;Server stack trace: &#xD;&#xA;   em System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)&#xD;&#xA;   em System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc&amp; rpc)&#xD;&#xA;   em System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)&#xD;&#xA;   em System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)&#xD;&#xA;   em System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)&#xD;&#xA;&#xD;&#xA;Exception rethrown at [0]: &#xD;&#xA;   em System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)&#xD;&#xA;   em System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData&amp; msgData, Int32 type)&#xD;&#xA;   em AL.Atendimento.SobConsulta.Repositorios.NRCentralDeReservas.ICentralReserva.ListarReservasSobConsulta(DTOAutenticacaoAcessoExterno autenticacaoAcesso, Boolean sobConsultaInternacional)&#xD;&#xA;   em AL.Atendimento.SobConsulta.Repositorios.NRCentralDeReservas.CentralReservaClient.ListarReservasSobConsulta(DTOAutenticacaoAcessoExterno autenticacaoAcesso, Boolean sobConsultaInternacional) na C:\GIT\AL.Atendimento.SobConsulta\SobConsultaApi\AL.Atendimento.SobConsulta.Repositorios\Service References\NRCentralDeReservas\Reference.cs:linha 13111&#xD;&#xA;   em AL.Atendimento.SobConsulta.Repositorios.Reservas.ReservaNrRepositorio.ListarReservasSobConsulta(Boolean internacional) na C:\GIT\AL.Atendimento.SobConsulta\SobConsultaApi\AL.Atendimento.SobConsulta.Repositorios\Reservas\ReservaNrRepositorio.cs:linha 255&#xD;&#xA;   em AL.Atendimento.SobConsulta.Executores.Contrato.ListarReservasSobConsultaExecutor.Executar(ListarReservasSobConsultaRequisicao requisicao) na C:\GIT\AL.Atendimento.SobConsulta\SobConsultaApi\AL.Atendimento.SobConsulta.Executores\SobConsulta\ListarReservasSobConsultaExecutor.cs:linha 26&#xD;&#xA;   em AL.Atendimento.SobConsulta.Api.Controllers.SobConsultaController.ListarReservasSobConsulta(Boolean internacional) na C:\GIT\AL.Atendimento.SobConsulta\SobConsultaApi\AL.Atendimento.SobConsulta.Api\Controllers\SobConsultaController.cs:linha 39&#xD;&#xA;   em lambda_method(Closure , Object , Object[] )&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.&lt;&gt;c__DisplayClass10.&lt;GetExecutor&gt;b__9(Object instance, Object[] methodParameters)&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)&#xD;&#xA;   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)&#xD;&#xA;--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   em System.Web.Http.Controllers.ApiControllerActionInvoker.&lt;InvokeActionAsyncCore&gt;d__0.MoveNext()&#xD;&#xA;--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   em System.Web.Http.Controllers.ActionFilterResult.&lt;ExecuteAsync&gt;d__2.MoveNext()&#xD;&#xA;--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   em System.Web.Http.Controllers.ExceptionFilterResult.&lt;ExecuteAsync&gt;d__0.MoveNext()&#xD;&#xA;   --- Fim do rastreamento de pilha de exceções internas ---" time="2017-11-28T10:10:51.5085072Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:application/json&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;HTTP_COOKIE:_ga=GA1.1.83113074.1498654463&#xD;&#xA;HTTP_HOST:localhost:59268&#xD;&#xA;HTTP_REFERER:http://localhost:59268/swagger/ui/index&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: application/json&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;Cookie: _ga=GA1.1.83113074.1498654463&#xD;&#xA;Host: localhost:59268&#xD;&#xA;Referer: http://localhost:59268/swagger/ui/index&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\GIT\AL.Atendimento.SobConsulta\SobConsultaApi\AL.Atendimento.SobConsulta.Api\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/api/v1/reservassobconsulta" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\GIT\AL.Atendimento.SobConsulta\SobConsultaApi\AL.Atendimento.SobConsulta.Api\api\v1\reservassobconsulta" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="55657" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/api/v1/reservassobconsulta" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="59268" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/api/v1/reservassobconsulta" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="application/json" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="_ga=GA1.1.83113074.1498654463" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:59268" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:59268/swagger/ui/index" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="_ga">
+      <value string="GA1.1.83113074.1498654463" />
+    </item>
+  </cookies>
+</error>

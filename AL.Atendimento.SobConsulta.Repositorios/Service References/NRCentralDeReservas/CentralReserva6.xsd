@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Politica.Business.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Politica.Business.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/Politica.Business.Entities.Enum" />
+  <xs:complexType name="DTOCondicaoComercial">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q1:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AtributosOferta" nillable="true" type="tns:ArrayOfDTOAtributoOferta" />
+          <xs:element minOccurs="0" name="CodigoCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoClusterExterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoDivulgacao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoEventoExterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoPromocional" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoTarifa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescontoCodigoPromocional" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="DescontoCodigoPromocionalReferenteAoTarifario" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="DescontoPercentualMaximo" type="xs:double" />
+          <xs:element minOccurs="0" name="DescontoPercentualMinimo" type="xs:double" />
+          <xs:element minOccurs="0" name="IdentificadorAutonomia" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdentificadorClusterInterno" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IdentificadorCondicaoComercial" type="xs:int" />
+          <xs:element minOccurs="0" name="IdentificadorCondicaoComercial2" type="xs:int" />
+          <xs:element minOccurs="0" name="Metadado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomeClusterInterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomeOferta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomePromocao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OfertaEmDestaque" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PossuiCodigoPromocional" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PossuiTermosCondicoes" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TermosECondicoesCodigoPromocional" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoCodigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Versao" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOCondicaoComercial" nillable="true" type="tns:DTOCondicaoComercial" />
+  <xs:complexType name="ArrayOfDTOAtributoOferta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOAtributoOferta" nillable="true" type="tns:DTOAtributoOferta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOAtributoOferta" nillable="true" type="tns:ArrayOfDTOAtributoOferta" />
+  <xs:complexType name="DTOAtributoOferta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DescricaoAtributo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOAtributoOferta" nillable="true" type="tns:DTOAtributoOferta" />
+  <xs:complexType name="DTOPolitica">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q2:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Atributos" nillable="true" type="tns:ArrayOfDTOAtributoOferta" />
+          <xs:element minOccurs="0" name="CodigoClusterExterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoEvento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoParceiro" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDClusterExterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDClusterInterno" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IDEvento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDPoliticaComercial" type="xs:int" />
+          <xs:element minOccurs="0" name="IdAntecipacao" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Mensagem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomeClusterExterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomeEvento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomePolitica" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroDocumentoCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OfertaEmDestaque" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PercentualDescontoAntecipacao" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="PoliticaPreferencial" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PossuitermosCondicoes" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TipoDocumentoCliente" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Politica.Business.Entities.Enum" minOccurs="0" name="TipoPolitica" type="q3:TipoPolitica" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOPolitica" nillable="true" type="tns:DTOPolitica" />
+  <xs:complexType name="DTOPoliticaInterno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClustersExternos" nillable="true" type="tns:ArrayOfDTOCluster" />
+      <xs:element minOccurs="0" name="ClustersInternos" nillable="true" type="tns:ArrayOfDTOClusterInterno" />
+      <xs:element minOccurs="0" name="CodigoClusterInformado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoEventoInformado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoParceiro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataFimUtilizacao" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataFimVigencia" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataInicioUtilizacao" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataInicioVigencia" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Eventos" nillable="true" type="tns:ArrayOfDTOEvento" />
+      <xs:element minOccurs="0" name="FaixasAntecedencia" nillable="true" type="tns:ArrayOfDTOAntecipacao" />
+      <xs:element minOccurs="0" name="IDPolitica" type="xs:int" />
+      <xs:element minOccurs="0" name="NomePolitica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDocumentoClienteInformado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfertaEmDestaque" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoliticaPadrao" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoliticaPreferencial" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PossuiTermosCondicoes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TipoAntecedencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumentoClienteInformado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_dataInicioUtilizacao" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_faixasAntecedencia" nillable="true" type="tns:ArrayOfDTOAntecipacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOPoliticaInterno" nillable="true" type="tns:DTOPoliticaInterno" />
+  <xs:complexType name="ArrayOfDTOCluster">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOCluster" nillable="true" type="tns:DTOCluster" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOCluster" nillable="true" type="tns:ArrayOfDTOCluster" />
+  <xs:complexType name="DTOCluster">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoInterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCluster" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOCluster" nillable="true" type="tns:DTOCluster" />
+  <xs:complexType name="ArrayOfDTOClusterInterno">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOClusterInterno" nillable="true" type="tns:DTOClusterInterno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOClusterInterno" nillable="true" type="tns:ArrayOfDTOClusterInterno" />
+  <xs:complexType name="DTOClusterInterno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdClusterInterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOClusterInterno" nillable="true" type="tns:DTOClusterInterno" />
+  <xs:complexType name="ArrayOfDTOEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOEvento" nillable="true" type="tns:DTOEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOEvento" nillable="true" type="tns:ArrayOfDTOEvento" />
+  <xs:complexType name="DTOEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoInterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDEvento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOEvento" nillable="true" type="tns:DTOEvento" />
+  <xs:complexType name="ArrayOfDTOAntecipacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOAntecipacao" nillable="true" type="tns:DTOAntecipacao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOAntecipacao" nillable="true" type="tns:ArrayOfDTOAntecipacao" />
+  <xs:complexType name="DTOAntecipacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AtributosOferta" nillable="true" type="tns:ArrayOfDTOAtributoOferta" />
+      <xs:element minOccurs="0" name="CodigoTafira" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FimFaixa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdAntecipacao" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="InicioFaixa" type="xs:int" />
+      <xs:element minOccurs="0" name="Mensagem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Percentual" type="xs:double" />
+      <xs:element minOccurs="0" name="Upgrades" nillable="true" type="tns:ArrayOfDTOUpgradeInterno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOAntecipacao" nillable="true" type="tns:DTOAntecipacao" />
+  <xs:complexType name="ArrayOfDTOUpgradeInterno">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOUpgradeInterno" nillable="true" type="tns:DTOUpgradeInterno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOUpgradeInterno" nillable="true" type="tns:ArrayOfDTOUpgradeInterno" />
+  <xs:complexType name="DTOUpgradeInterno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoGrupoOrigem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoGrupoUpgrade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescontoRegional1" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="DescontoRegional2" nillable="true" type="xs:double" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Politica.Business.Entities.Enum" minOccurs="0" name="TipoUpgrade" type="q4:TipoUpgrade" />
+      <xs:element minOccurs="0" name="ValorPromocional" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOUpgradeInterno" nillable="true" type="tns:DTOUpgradeInterno" />
+</xs:schema>

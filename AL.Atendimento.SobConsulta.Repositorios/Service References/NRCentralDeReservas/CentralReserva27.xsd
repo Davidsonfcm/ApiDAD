@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities.AdicionalReserva" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Reservas.Business.Entities.AdicionalReserva" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" />
+  <xs:complexType name="ArrayOfDTOAdicionalReservaComposto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOAdicionalReservaComposto" nillable="true" type="tns:DTOAdicionalReservaComposto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOAdicionalReservaComposto" nillable="true" type="tns:ArrayOfDTOAdicionalReservaComposto" />
+  <xs:complexType name="DTOAdicionalReservaComposto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adicionais" nillable="true" type="tns:ArrayOfDTOAdicionalReserva" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOAdicionalReservaComposto" nillable="true" type="tns:DTOAdicionalReservaComposto" />
+  <xs:complexType name="ArrayOfDTOAdicionalReserva">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOAdicionalReserva" nillable="true" type="tns:DTOAdicionalReserva" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOAdicionalReserva" nillable="true" type="tns:ArrayOfDTOAdicionalReserva" />
+  <xs:complexType name="DTOAdicionalReserva">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q1:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoProdutoAdicional" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="EhSeguro" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Incluso" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IndicarUnidade" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Moeda" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomeAdicional" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PercentualDesconto" type="xs:double" />
+          <xs:element minOccurs="0" name="PermiteAlteracao" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Qualitativo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantidade" type="xs:int" />
+          <xs:element minOccurs="0" name="Selecionado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TokenAdicional" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Unidades" type="xs:int" />
+          <xs:element minOccurs="0" name="Valor" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorComDesconto" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDesconto" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorTotal" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOAdicionalReserva" nillable="true" type="tns:DTOAdicionalReserva" />
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Autenticacao.Business.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Autenticacao.Business.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3034/Plataforma/Autorizacao.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" />
+  <xs:complexType name="ExcecaoTokenInvalido">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q1:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoTokenInvalido" nillable="true" type="tns:ExcecaoTokenInvalido" />
+  <xs:complexType name="ExcecaoTokenInativo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q2:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoTokenInativo" nillable="true" type="tns:ExcecaoTokenInativo" />
+  <xs:complexType name="ExcecaoSessaoInvalida">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.Excecao" base="q3:ExcecaoBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExcecaoSessaoInvalida" nillable="true" type="tns:ExcecaoSessaoInvalida" />
+</xs:schema>

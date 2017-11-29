@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LL.CanaisWeb.Fronteiras.Dtos.Impressao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="InformacoesReservaDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_CartaoAdministradora_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_CartaoDataValidade_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_Cartao_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EhCartaoVirtual_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_FaturarPJ_x003E_k__BackingField" nillable="true" type="xs:boolean" />
+      <xs:element name="_x003C_TipoCliente_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="acao" nillable="true" type="xs:string" />
+      <xs:element name="atributos" nillable="true" type="xs:string" />
+      <xs:element name="campoLogoFast" nillable="true" type="xs:string" />
+      <xs:element name="campoLogoFastCompacto" nillable="true" type="xs:string" />
+      <xs:element name="campoTarifa" nillable="true" type="xs:string" />
+      <xs:element name="campoTextoFast" nillable="true" type="xs:string" />
+      <xs:element name="centroDeCusto" nillable="true" type="xs:string" />
+      <xs:element name="cidadeAgenciaDevolucao" nillable="true" type="xs:string" />
+      <xs:element name="cidadeAgenciaRetirada" nillable="true" type="xs:string" />
+      <xs:element name="codigoAGVIG" nillable="true" type="xs:string" />
+      <xs:element name="codigoAgenciaDevolucao" nillable="true" type="xs:string" />
+      <xs:element name="codigoAgenciaRetirada" nillable="true" type="xs:string" />
+      <xs:element name="codigoContrato" nillable="true" type="xs:string" />
+      <xs:element name="codigoEmpresa" nillable="true" type="xs:string" />
+      <xs:element name="codigoGrupoVeiculo" nillable="true" type="xs:string" />
+      <xs:element name="codigoTarifa" nillable="true" type="xs:string" />
+      <xs:element name="comentarioFormaPagamento" nillable="true" type="xs:string" />
+      <xs:element name="comentarioMotorista" nillable="true" type="xs:string" />
+      <xs:element name="dataAcao" type="xs:dateTime" />
+      <xs:element name="dataHoraAlteracao" nillable="true" type="xs:dateTime" />
+      <xs:element name="dataHoraCriacao" nillable="true" type="xs:dateTime" />
+      <xs:element name="dataHoraDevolucao" type="xs:dateTime" />
+      <xs:element name="dataHoraRetirada" type="xs:dateTime" />
+      <xs:element name="descricaoTarifa" nillable="true" type="xs:string" />
+      <xs:element name="descricaoTipoMotorista" nillable="true" type="xs:string" />
+      <xs:element name="destino" nillable="true" type="xs:string" />
+      <xs:element name="documentoAGVIG" nillable="true" type="xs:string" />
+      <xs:element name="enderecoAgenciaDevolucao" nillable="true" type="xs:string" />
+      <xs:element name="enderecoAgenciaRetirada" nillable="true" type="xs:string" />
+      <xs:element name="enumOrigemDaReserva" nillable="true" type="xs:string" />
+      <xs:element name="existeFast" type="xs:boolean" />
+      <xs:element name="faturarAGVIG" type="xs:boolean" />
+      <xs:element name="formaPagamento" nillable="true" type="xs:string" />
+      <xs:element name="identificadorCondicaoComercial" type="xs:int" />
+      <xs:element name="itensAFaturar" nillable="true" type="xs:string" />
+      <xs:element name="localAtendimento" nillable="true" type="xs:string" />
+      <xs:element name="localizador" nillable="true" type="xs:string" />
+      <xs:element name="mensagemLocalizador" nillable="true" type="xs:string" />
+      <xs:element name="nomeAGVIG" nillable="true" type="xs:string" />
+      <xs:element name="nomeAgenciaDevolucao" nillable="true" type="xs:string" />
+      <xs:element name="nomeAgenciaRetirada" nillable="true" type="xs:string" />
+      <xs:element name="nomeCondutor" nillable="true" type="xs:string" />
+      <xs:element name="nomeDaOfertaCondicaoComercial" nillable="true" type="xs:string" />
+      <xs:element name="nomeEmissor" nillable="true" type="xs:string" />
+      <xs:element name="nomeEmpresa" nillable="true" type="xs:string" />
+      <xs:element name="nomeGrupoVeiculo" nillable="true" type="xs:string" />
+      <xs:element name="nomeUsuario" nillable="true" type="xs:string" />
+      <xs:element name="numeroDocumento" nillable="true" type="xs:string" />
+      <xs:element name="origemDaReserva" nillable="true" type="xs:string" />
+      <xs:element name="percentualTaxaServico" nillable="true" type="xs:string" />
+      <xs:element name="quantidadeDiarias" nillable="true" type="xs:string" />
+      <xs:element name="quantidadeHoras" nillable="true" type="xs:string" />
+      <xs:element name="quantidadeHorasExtras" nillable="true" type="xs:string" />
+      <xs:element name="roteiro" nillable="true" type="xs:string" />
+      <xs:element name="setor" nillable="true" type="xs:string" />
+      <xs:element name="statusReserva" nillable="true" type="xs:string" />
+      <xs:element name="tarifaMensal" type="xs:boolean" />
+      <xs:element name="taxaRetornoCidadesDiferentes" nillable="true" type="xs:string" />
+      <xs:element name="taxaRetornoMesmaCidade" nillable="true" type="xs:string" />
+      <xs:element name="telefoneAgenciaDevolucao" nillable="true" type="xs:string" />
+      <xs:element name="telefoneAgenciaRetirada" nillable="true" type="xs:string" />
+      <xs:element name="telefoneCondutor" nillable="true" type="xs:string" />
+      <xs:element name="terno" type="xs:boolean" />
+      <xs:element name="textoTaxaAgenciasAeroporto" nillable="true" type="xs:string" />
+      <xs:element name="tipoVoucher" nillable="true" type="xs:string" />
+      <xs:element name="urlLogoPretoBrancaRelatorios" nillable="true" type="xs:string" />
+      <xs:element name="urlLogoTransparente" nillable="true" type="xs:string" />
+      <xs:element name="valorDiaria" nillable="true" type="xs:string" />
+      <xs:element name="valorHoraExtra" nillable="true" type="xs:string" />
+      <xs:element name="valorIVA" nillable="true" type="xs:string" />
+      <xs:element name="valorLavagemEspecial" nillable="true" type="xs:string" />
+      <xs:element name="valorLavagemSimples" nillable="true" type="xs:string" />
+      <xs:element name="valorLiquidoDiaria" nillable="true" type="xs:string" />
+      <xs:element name="valorLiquidoHoraExtra" nillable="true" type="xs:string" />
+      <xs:element name="valorSubTotalDiariasETaxas" nillable="true" type="xs:string" />
+      <xs:element name="valorTaxaRetorno" nillable="true" type="xs:string" />
+      <xs:element name="valorTaxaServico" nillable="true" type="xs:string" />
+      <xs:element name="valorTotalDaReserva" nillable="true" type="xs:string" />
+      <xs:element name="valorTotalDiarias" nillable="true" type="xs:string" />
+      <xs:element name="valorTotalHorasExtras" nillable="true" type="xs:string" />
+      <xs:element name="viagem" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformacoesReservaDTO" nillable="true" type="tns:InformacoesReservaDTO" />
+  <xs:complexType name="ArrayOfInformacoesAdicionalDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InformacoesAdicionalDTO" nillable="true" type="tns:InformacoesAdicionalDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInformacoesAdicionalDTO" nillable="true" type="tns:ArrayOfInformacoesAdicionalDTO" />
+  <xs:complexType name="InformacoesAdicionalDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_DescricaoAdicional_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_EhCoberturaInclusa_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_QuantidadeAdicional_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_ValorTotalAdicional_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_ValorUnitario_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformacoesAdicionalDTO" nillable="true" type="tns:InformacoesAdicionalDTO" />
+  <xs:complexType name="ArrayOfInformacoesBeneficioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InformacoesBeneficioDTO" nillable="true" type="tns:InformacoesBeneficioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInformacoesBeneficioDTO" nillable="true" type="tns:ArrayOfInformacoesBeneficioDTO" />
+  <xs:complexType name="InformacoesBeneficioDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_Disponivel_x003E_k__BackingField" type="xs:boolean" />
+      <xs:element name="_x003C_IdentificadorBeneficio_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_MensagemBeneficio_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformacoesBeneficioDTO" nillable="true" type="tns:InformacoesBeneficioDTO" />
+  <xs:complexType name="ArrayOfInformacoesAtributosDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InformacoesAtributosDTO" nillable="true" type="tns:InformacoesAtributosDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInformacoesAtributosDTO" nillable="true" type="tns:ArrayOfInformacoesAtributosDTO" />
+  <xs:complexType name="InformacoesAtributosDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_Atributos_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformacoesAtributosDTO" nillable="true" type="tns:InformacoesAtributosDTO" />
+  <xs:complexType name="LabelInformacoesReservaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Agencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgenciaDeViagem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Atencao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BeneficiosDestaReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BeneficiosFidelidade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentroDeCusto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoberturasEOpcionais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Condutor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConfirmacaoDeReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CotacaoDeReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DadosDaReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DadosDoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataEHora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataEHoraDevolucao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataEHoraRetirada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Destino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Devolucao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diaria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Endereco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormaDePagamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrupoDeVeiculos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HoraExtra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HorarioDeFuncionamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HorasDiaria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HorasExtras" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IVA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformacoesDeBeneficios" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformacoesDeBeneficiosParaCondutor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformacoesDoMotorista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformacoesFinanceiras" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformacoesSobreAReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Local" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalDeAtendimento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalizadorDaReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemConteplamentoFormaDePagamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemCotacaoPrecosEDisponibilidadeSujeitoAlteracao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemInformativaAluguelMensal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemInformativoTarifas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemObservacaoBeneficios" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemObservacaoTarifas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemReservaIdentificada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemReservaNaoConcluida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemSuaReservaFoiConcluida" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemTaxaRetorno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemValorReservaNaoContemplaMotorista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigemDaReserva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Retirada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RetiradaEDevolucao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Roteiro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subtotal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tarifa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Taxa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxaRetorno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Taxas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Terno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDeMotorista" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorDaDiariaComDesconto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorTotalPrevisto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Viagem" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabelInformacoesReservaDTO" nillable="true" type="tns:LabelInformacoesReservaDTO" />
+  <xs:complexType name="LabelInformacoesGeraisDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Condicoes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InformacoesGerais" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemAbastecimento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemAluguelCadeiraBebe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemAprovacaoComCartaoCredito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemBoletimOcorrencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemCaroPodeSerDevolvido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemCarroEntregueLimpo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemCobrancaExtraGPS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemCondicoesGeraisContrato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemDiariasCoberturaRisco" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemFaltaModeloReservado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemGarantimosSuaReservaPeloPeriodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemIdadeMinima" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemIndenizacaoGPS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemLocacaoComGPS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemPagamentoAntecipado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemSujeitoAprovacaoCredito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemTaxaEntreAgenciasMesmaCidade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemTaxaKmRodado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemTempoMinimoCarteira" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemToleranciaDevolucao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemValorLavagemEspecial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensagemValorLavagemSimples" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Requisitos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServicosEspeciais" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabelInformacoesGeraisDTO" nillable="true" type="tns:LabelInformacoesGeraisDTO" />
+  <xs:complexType name="TermosECondicoesConfirmacaoReservaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TermosECondicoes" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TermosECondicoesConfirmacaoReservaDTO" nillable="true" type="tns:TermosECondicoesConfirmacaoReservaDTO" />
+  <xs:complexType name="ArrayOfInformacoesHorarioFuncionamentoAgenciaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InformacoesHorarioFuncionamentoAgenciaDTO" nillable="true" type="tns:InformacoesHorarioFuncionamentoAgenciaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInformacoesHorarioFuncionamentoAgenciaDTO" nillable="true" type="tns:ArrayOfInformacoesHorarioFuncionamentoAgenciaDTO" />
+  <xs:complexType name="InformacoesHorarioFuncionamentoAgenciaDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_DiaDaSemana_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_HorarioAbertura_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_HorarioFechamento_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_HorarioFuncionamentoFormatado_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformacoesHorarioFuncionamentoAgenciaDTO" nillable="true" type="tns:InformacoesHorarioFuncionamentoAgenciaDTO" />
+  <xs:complexType name="ArrayOfInformacoesReservaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InformacoesReservaDTO" nillable="true" type="tns:InformacoesReservaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInformacoesReservaDTO" nillable="true" type="tns:ArrayOfInformacoesReservaDTO" />
+</xs:schema>

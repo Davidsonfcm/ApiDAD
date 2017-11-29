@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AL.Atendimento.SobConsulta.Repositorios.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AL_Atendimento_SobConsulta_Repositorios_wsCanaisWeb_CanaisWeb" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www-h.localiza.com/Empresas2/servicos/CanaisWeb.svc</Value>
+    </Setting>
+    <Setting Name="AL_Atendimento_SobConsulta_Repositorios_wsReport_ReportingService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://reports.localiza.com/ReportServer/ReportService.asmx</Value>
+    </Setting>
+    <Setting Name="AL_Atendimento_SobConsulta_Repositorios_wsReserva_Reservas" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wshom.localiza.com/Localiza/Reserva/Reservas.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

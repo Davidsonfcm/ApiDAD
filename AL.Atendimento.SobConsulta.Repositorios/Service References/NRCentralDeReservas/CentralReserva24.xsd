@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Tarifa.Business.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Tarifa.Business.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/Politica.Business.Entities" />
+  <xs:import schemaLocation="http://wapps-h.localiza.com/localiza/nucleoreserva3/reserva/CentralReserva.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/Tarifa.Business.Entities.Enum" />
+  <xs:complexType name="DTOTarifaPromocional">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q1:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoCriptografado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodigoDivulgacao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoFilial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoTarifaGeradora" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataFimVigencia" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DataInicioVigencia" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DescontoPercentual" type="xs:double" />
+          <xs:element minOccurs="0" name="DescricaoTarifa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mensagem" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomePromocao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NovoCodigoPromocional" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NumeroMinimoDiarias" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TermosECondicoes" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoEvento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOTarifaPromocional" nillable="true" type="tns:DTOTarifaPromocional" />
+  <xs:complexType name="ArrayOfDTOTarifa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOTarifa" nillable="true" type="tns:DTOTarifa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOTarifa" nillable="true" type="tns:ArrayOfDTOTarifa" />
+  <xs:complexType name="DTOTarifa">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q2:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoCidadeRetiradaNegociacao" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CodigoNegociacao" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Politica.Business.Entities" minOccurs="0" name="CondicaoComercial" nillable="true" type="q3:DTOCondicaoComercial" />
+          <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdentificadorRegionalizacao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NomeOferta" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Politica.Business.Entities" minOccurs="0" name="PoliticaComercial" nillable="true" type="q4:DTOPolitica" />
+          <xs:element minOccurs="0" name="PossuiAcordo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RegrasTarifa" nillable="true" type="tns:ArrayOfDTORegraTarifa" />
+          <xs:element minOccurs="0" name="TarifaExibida" type="xs:boolean" />
+          <xs:element minOccurs="0" name="TarifaSelecionada" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorDiariaOferta" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorEconomizado" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorReferencia" type="xs:double" />
+          <xs:element minOccurs="0" name="ValoresSeguro" nillable="true" type="tns:ArrayOfDTOValorSeguroGrupoVeiculo" />
+          <xs:element minOccurs="0" name="ValoresTarifa" nillable="true" type="tns:ArrayOfDTOValorTarifa" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOTarifa" nillable="true" type="tns:DTOTarifa" />
+  <xs:complexType name="ArrayOfDTORegraTarifa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTORegraTarifa" nillable="true" type="tns:DTORegraTarifa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTORegraTarifa" nillable="true" type="tns:ArrayOfDTORegraTarifa" />
+  <xs:complexType name="DTORegraTarifa">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q5:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AluguelTemporario" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CoberturaTerceiroIncluso" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CoberturaTerceiroVenda" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodigoTarifa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataEfetivacao" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DiaMaximoDevolucao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiaMaximoRetirada" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiaMinimoDevolucao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiaMinimoRetirada" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DiariasLivres1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DiariasLivres2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DiariasLivres3" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DiariasLivres4" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FranquiaQuilometragemDiaria" type="xs:int" />
+          <xs:element minOccurs="0" name="FranquiaQuilometragemMensal" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HoraMaximaDevolucao" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HoraMaximaRetirada" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HoraMinimaDevolucao" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HoraMinimaRetirada" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="IdentificadorRiscoIncluso" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Tarifa.Business.Entities.Enum" minOccurs="0" name="IndicadorCobrancaTaxaRetorno" type="q6:IndicadorCobrancaTaxaRetorno" />
+          <xs:element minOccurs="0" name="KmControlado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ListaFaixasDescontoProgressivoConsulta" nillable="true" type="tns:ArrayOfDTODescontoProgressivoConsulta" />
+          <xs:element minOccurs="0" name="MinutosToleranciaHorasExtras" type="xs:int" />
+          <xs:element minOccurs="0" name="NumeroDiarias1" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumeroDiarias2" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumeroDiarias3" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumeroDiarias4" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumeroMaximoDiarias" type="xs:int" />
+          <xs:element minOccurs="0" name="NumeroMinimoDiarias" type="xs:int" />
+          <xs:element minOccurs="0" name="PossuiCondutorAdicional" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PossuiTanqueCheio" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PossuiToleranciaHorasExtras" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StatusTarifa" nillable="true" type="xs:string" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Tarifa.Business.Entities.Enum" minOccurs="0" name="TipoCobrancaTaxaServico" type="q7:TipoCobrancaTaxaServico" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTORegraTarifa" nillable="true" type="tns:DTORegraTarifa" />
+  <xs:complexType name="ArrayOfDTODescontoProgressivoConsulta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTODescontoProgressivoConsulta" nillable="true" type="tns:DTODescontoProgressivoConsulta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTODescontoProgressivoConsulta" nillable="true" type="tns:ArrayOfDTODescontoProgressivoConsulta" />
+  <xs:complexType name="DTODescontoProgressivoConsulta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoGrupoVeiculo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataEfetivacao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NumFaixa" type="xs:int" />
+      <xs:element minOccurs="0" name="PercentualDesconto" type="xs:double" />
+      <xs:element minOccurs="0" name="ValorMinimoDiaria" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTODescontoProgressivoConsulta" nillable="true" type="tns:DTODescontoProgressivoConsulta" />
+  <xs:complexType name="ArrayOfDTOValorSeguroGrupoVeiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOValorSeguroGrupoVeiculo" nillable="true" type="tns:DTOValorSeguroGrupoVeiculo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOValorSeguroGrupoVeiculo" nillable="true" type="tns:ArrayOfDTOValorSeguroGrupoVeiculo" />
+  <xs:complexType name="DTOValorSeguroGrupoVeiculo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q8:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoGrupoVeiculo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoRegiaoTarifaria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataEfetivacao" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValorSeguroDiaria" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOValorSeguroGrupoVeiculo" nillable="true" type="tns:DTOValorSeguroGrupoVeiculo" />
+  <xs:complexType name="ArrayOfDTOValorTarifa">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOValorTarifa" nillable="true" type="tns:DTOValorTarifa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOValorTarifa" nillable="true" type="tns:ArrayOfDTOValorTarifa" />
+  <xs:complexType name="DTOValorTarifa">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q9:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoGrupoVeiculo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodigoRegiaoTarifaria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataEfetivacao" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Moeda" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorCoberturaRisco" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorCoparticipacao" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDiaria" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorFranquia" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorHoraExtra" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorPorKmRodado" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorRisco" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOValorTarifa" nillable="true" type="tns:DTOValorTarifa" />
+  <xs:complexType name="DTODescontoProgressivo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q10:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FaixasDesconto" nillable="true" type="tns:ArrayOfDTOFaixaDesconto" />
+          <xs:element minOccurs="0" name="QuantidadeDiarias" type="xs:int" />
+          <xs:element minOccurs="0" name="QuantidadeDiariasExcedentes" type="xs:int" />
+          <xs:element minOccurs="0" name="ValorDiariaMedia" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorMedioFaixas" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorTotal" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorTotalDiarias" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorTotalDiariasExcedentes" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTODescontoProgressivo" nillable="true" type="tns:DTODescontoProgressivo" />
+  <xs:complexType name="ArrayOfDTOFaixaDesconto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOFaixaDesconto" nillable="true" type="tns:DTOFaixaDesconto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOFaixaDesconto" nillable="true" type="tns:ArrayOfDTOFaixaDesconto" />
+  <xs:complexType name="DTOFaixaDesconto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Faixa" type="xs:int" />
+      <xs:element minOccurs="0" name="FaixaDiariasExcedentes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FaixaLimite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PercentualDesconto" type="xs:double" />
+      <xs:element minOccurs="0" name="QuantidadeDiariasDaFaixa" type="xs:int" />
+      <xs:element minOccurs="0" name="ValorAdicionaisETaxas" type="xs:double" />
+      <xs:element minOccurs="0" name="ValorDescontoParcial" type="xs:double" />
+      <xs:element minOccurs="0" name="ValorDiariaComDesconto" type="xs:double" />
+      <xs:element minOccurs="0" name="ValorParcialTotal" type="xs:double" />
+      <xs:element minOccurs="0" name="ValorParcialTotalDiariaSemDesconto" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOFaixaDesconto" nillable="true" type="tns:DTOFaixaDesconto" />
+  <xs:complexType name="DTOValoresDescontoEspecial">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Localiza.Nucleo.Util.DTO" base="q11:DTOBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoDescontoEspecial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PercentualDescontoEspecial" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDescontoEspecialDiaria" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDescontoEspecialDiariaMotorista" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDescontoEspecialHoraExtra" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDescontoEspecialHoraExtraMotorista" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDescontoEspecialKilometragem" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDescontoEspecialSobreTotalDiariaHoraExtraEKm" type="xs:double" />
+          <xs:element minOccurs="0" name="ValorDescontoEspecialTaxaRetorno" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DTOValoresDescontoEspecial" nillable="true" type="tns:DTOValoresDescontoEspecial" />
+</xs:schema>
