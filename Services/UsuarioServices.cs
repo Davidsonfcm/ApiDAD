@@ -27,7 +27,8 @@ namespace Services
             ResponseDTO response = new ResponseDTO();
             try
             {
-                response.Contents = this.context.Usuarios.ToList();
+                
+                response.Contents = this.All().ToList();
                 response.Success = true;
             }
             catch (Exception ex)
