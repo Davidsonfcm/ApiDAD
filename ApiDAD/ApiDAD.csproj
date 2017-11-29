@@ -14,7 +14,7 @@
     <RootNamespace>ApiDAD</RootNamespace>
     <AssemblyName>ApiDAD</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
@@ -206,7 +206,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59267</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://www.dad.com.br</IISUrl>
+          <IISUrl>http://localhost:59267/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
