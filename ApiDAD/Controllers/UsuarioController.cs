@@ -49,8 +49,8 @@ namespace ApiDAD
         }
 
         [HttpPut]
-        [Route("Editar")]
-        public ResponseDTO Editar([FromBody]Usuario usuario)
+        [Route("Editar/{cpf}")]
+        public ResponseDTO Editar(string cpf, [FromBody]Usuario usuario)
         {
             return this.usuarioServices.EditarUsuario(usuario);
         }

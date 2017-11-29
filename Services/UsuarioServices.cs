@@ -69,6 +69,7 @@ namespace Services
                             this.context.SaveChanges();
                         }
 
+                        response.Contents = usuario;
                         response.Success = true;
                     }
                 }
