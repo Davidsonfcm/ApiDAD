@@ -31,6 +31,7 @@ namespace DataAccess
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UsuarioMap());
+            modelBuilder.Configurations.Add(new ConsultaMap());
         }
     }
 }

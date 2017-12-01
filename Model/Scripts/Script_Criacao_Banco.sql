@@ -9,7 +9,6 @@ CREATE TABLE [dbo].[consulta](
 	[identificador] [int] IDENTITY(1,1) NOT NULL,
 	[data] [datetime] NOT NULL,
 	[animal] [varchar](100) NOT NULL,
-	[descricao] [varchar](max) NOT NULL,
 	[usuarioCpf] [nvarchar](50) NOT NULL,
 	[diagnostico] [varchar](max) NULL,
 PRIMARY KEY CLUSTERED 

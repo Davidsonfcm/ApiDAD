@@ -11,9 +11,9 @@ namespace DataAccess.Mapping
 
             this.HasKey(t => t.identificador);
 
+            this.Property(t => t.identificador).HasColumnName("identificador");
             this.Property(t => t.data).HasColumnName("data");
             this.Property(t => t.animal).HasColumnName("animal");
-            this.Property(t => t.descricao).HasColumnName("descricao");
             this.Property(t => t.diagnostico).HasColumnName("diagnostico");
             this.Property(t => t.usuarioCpf).HasColumnName("usuarioCpf");
         }

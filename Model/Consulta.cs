@@ -11,7 +11,6 @@ namespace Model
         public int identificador { get; set;}
         public DateTime data { get; set; }
         public string animal { get; set; }
-        public string descricao { get; set; }
         public string diagnostico { get; set; }
         public string usuarioCpf { get; set; }
     }
