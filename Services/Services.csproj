@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultaServices.cs" />
     <Compile Include="MailServices.cs" />
     <Compile Include="UsuarioServices.cs" />
     <Compile Include="Services.cs" />

@@ -26,6 +26,7 @@ namespace DataAccess
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Consulta> Consulta { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

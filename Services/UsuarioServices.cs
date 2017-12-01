@@ -145,7 +145,7 @@ namespace Services
                 }
                 else
                 {
-                    Usuario usuario = this.context.Usuarios.FirstOrDefault(x => x.cpf.Equals(u.cpf)); ;
+                    Usuario usuario = this.context.Usuarios.FirstOrDefault(x => x.cpf.Equals(u.cpf));
                     usuario.email = u.email;
                     usuario.nome = u.nome;
                     usuario.senha = u.senha;
