@@ -37,6 +37,20 @@ namespace ApiDAD.Controllers
         }
 
         [HttpGet]
+        [Route("FiltrarId/{identificador}")]
+        public ResponseDTO FiltrarId(int identificador)
+        {
+            return this.consultaServices.BuscarConsulta(identificador);
+        }
+
+        [HttpGet]
+        [Route("Todos")]
+        public ResponseDTO Todos()
+        {
+            return this.consultaServices.BuscarTodos();
+        }
+
+        [HttpGet]
         [Route("Cancelar/{identificador}")]
         public ResponseDTO Cancelar(int identificador)
         {

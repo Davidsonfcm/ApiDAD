@@ -13,8 +13,50 @@ namespace Services
             ResponseDTO response = new ResponseDTO();
             try
             {
-                response.Contents = this.All().ToList();
+                response.Contents = this.All().Where(c =>
+                (c.diagnostico == "" || c.diagnostico == null)
+                && c.data.Year >= DateTime.Now.Year
+                && c.data.Month >= DateTime.Now.Month
+                && c.data.Day >= DateTime.Now.Day)
+                .OrderBy(c => c.data)
+                .AsEnumerable()
+                .Select(c => new {
+                    identificador = c.identificador,
+                    animal = c.animal,
+                    data = c.data.Day.ToString() 
+                    +"/"+ c.data.Month.ToString()
+                    + "/"+ c.data.Year.ToString()
+                    +" "+ c.data.Hour.ToString() +":"+ c.data.Minute.ToString(),
+                    diagnostico = c.diagnostico,
+                    usuarioCpf = c.usuarioCpf,
+                    proprietario = this.context.Usuarios.Where(a => a.cpf == c.usuarioCpf).FirstOrDefault().nome
+                }).ToList();
+
                 response.Success = true;
+            }
+            catch (Exception ex)
+            {
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        public ResponseDTO BuscarConsulta(int identificador)
+        {
+            ResponseDTO response = new ResponseDTO();
+            try
+            {
+                List<Consulta> consultas = this.context.Consulta.Where(c => c.identificador.Equals(identificador)).ToList();
+
+                if (consultas.Count == 0)
+                {
+                    response.Message = "Consulta não encontrada";
+                    return response;
+                }
+
+                response.Contents = consultas;
+                response.Success = true;
+                return response;
             }
             catch (Exception ex)
             {
